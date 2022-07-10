@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJC - O nas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">O nas</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </nav>
+    <header class="flex">
+        <div class="flex flex-column">
+            <img class="logo" src="logo.png" alt="">
+        </div>
+    </header>
+    <section class="flex flex-column secabout">
+            <div class="flex flex-row">
+                <img id="first" onMouseOver="show(this.id)" onMouseOut="hide(this.id)" src="k1.jpg" alt="">
+                <div class="aboutdiv first">
+                <h2>Montaż filmów</h2>
+                Zajmujemy się profesjonalnym montażem filmów oraz ich obróbką. Oferujemy montaż teledysków z efektami, filmów długometrażowych, montaż filmów na YouTube oraz filmów na użytek prywatny.
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <div class="aboutdiv second">
+                <h2>Tworzenie stron internetowych</h2>
+                Zaprojektujemy od podstaw twoją stronę internetową. Nie używamy żadnych gotowych silników, a wszystkie strony tworzone są od podstaw. Jeśli szukasz strony dla swojej firmy stworzymy ją dla Ciebie.
+                </div>
+                <img id="second" onMouseOver="show(this.id)" onMouseOut="hide(this.id)" src="k2.jpg" alt="">
+            </div>
+            <div class="flex flex-row">
+                <img id="third" onMouseOver="show(this.id)" onMouseOut="hide(this.id)" src="k3.jpg" alt="">
+                <div class="aboutdiv third">
+                <h2>Tworzenie grafik</h2>
+                Zajmujemy się kompleksową obsługą graficzną. Tworzymy loga, projekty oraz edytujemy i obrabiamy zdjęcia.
+                </div>
+            </div>
+            <div class="flex flex-row"> 
+                <div class="aboutdiv fourth">
+                <h2>Programowanie</h2>
+                Zaprojektujemy dla Ciebie aplikację i napiszemy ją od podstaw korzystając z języka C#.
+                </div>
+                <img id="fourth" onMouseOver="show(this.id)" onMouseOut="hide(this.id)" src="k4.jpg" alt="">
+            </div>
+    </section>
+    <footer>Wykonano na potrzeby zajęć "Wprowadzenie do technologi webowych" | Mateusz Jawor 13049</footer>
+</body>
+<script>
+    function show(img){
+        console.log(img);   
+        document.getElementsByClassName(img)[0].classList.add("visible");
+    }
+    function hide(img){
+        document.getElementsByClassName(img)[0].classList.remove("visible");
+    }
+</script>
+</html>

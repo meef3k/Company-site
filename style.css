@@ -1,0 +1,236 @@
+* {
+    font-family: 'Trebuchet MS';
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+nav {
+    overflow: hidden;
+    background-color: #26292e;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+header {
+    padding-top: 20px;
+    background-image: url("tlo.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+footer {
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    background-color: #26292e;
+}
+.main {
+    text-align: center;
+    margin: 40px 0;
+}
+.main div {
+    width: 40%;
+    margin: 0 30px;
+}
+.main aside {
+    width: 40%;
+    margin: 0 30px;
+}
+.text {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.gallery {
+    text-align: center;
+    margin: 50px 0;
+}
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+.galleryanimation {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.gallery>div:nth-child(2) {
+    width: 33%;
+}
+.gallery>div:nth-child(1), .gallery>div:nth-child(3) {
+    width: 29%;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+.gal {
+    display: none;
+}
+.animation {
+    position: absolute;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+.box {
+    position: absolute;
+    bottom: 400px;
+    right: 200px;
+    font-size: 24px;
+    color: black;
+    line-height: 2em;
+    list-style-type: square;
+}
+.box li {
+    margin: 10px 0;
+}
+.secabout {
+    margin: 50px 0;
+}
+.secabout img {
+    height: 300px;
+    width: 300px;
+}
+.aboutdiv {
+    visibility: hidden;
+    padding: 30px 30px;
+    width: 100%;
+}
+.visible {
+    z-index: -1;
+    visibility: visible;
+    animation: show 3s ease;
+}
+@keyframes show {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+.secabout>div {
+    width: 80%;
+}
+.second, .fourth {
+    text-align: right;
+}
+.contact {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.contact>div, .contact>form {
+    width: 80%;
+}
+.contact img {
+    height: 400px;
+    width: 600px;
+}
+.contact>form div {
+    width: 50%;
+}
+input {
+    border: none;
+    border-bottom: 2px solid black;
+    height: 28px;
+    background-color: transparent;
+    width: 90%;
+    margin-bottom: 5px;
+}
+label {
+    margin-top: 5px;
+}
+.form div {
+    position: relative;
+    margin: 10px 0;
+}
+form textarea {
+    margin-top: 5px;
+    width: 90%;
+    background-color: transparent;
+    border: 2px solid black;
+    resize: none;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+button {
+    background-color: #26292e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 0;
+    cursor: pointer;
+    width: 90%;
+}
+.address {
+    margin-top: 50px;
+}
+.address h3, .address p {
+    margin: 0 10px;
+}
+.logo {
+    width: 200px;
+}
+@keyframes spin{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@media (max-width:1100px) and (min-width:1000px){
+    .main{flex-direction: column;}
+    .main>div{width: 80%;}
+    .main>aside{margin-top: 10px;}
+    aside img {width: 30%; height: auto;}
+    .media{display:none;}
+}
+@media (max-width:1000px) and (min-width:800px){
+    .main{flex-direction: column;}
+    .main>div{width: 80%;}
+    .main>aside{margin-top: 10px;}
+    aside img {width: 30%; height: auto;}
+    .media{display:none;}
+}
+@media (max-width:800px) and (min-width:500px){
+    .main{flex-direction: column;}
+    .main>div{width: 80%;}
+    .main>aside{margin-top: 10px;}
+    aside img {width: 30%; height: auto;}
+    .media{display:none;}
+}
+@media (max-width:500px){
+    .main{flex-direction: column;}
+    .main>div{width: 80%;}
+    .main>aside{margin-top: 10px;}
+    aside img {width: 30%; height: auto;}
+    .media{display:none;}
+}

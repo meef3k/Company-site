@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Comp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">O nas</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </nav>
+    <header class="flex">
+        <div class="flex flex-column">
+            <img  class="logo" src="logo.png" alt="">
+        </div>
+    </header>
+    <section class="flex flex-row main">
+        <div>
+            <h2>
+                MJ Comp
+            </h2>
+            <p class="text">
+                Jesteśmy prężnie rozwijającą się firmą IT. Oferujemy szeroki wybór usług. Realizujemy, dostarczamy oraz wdrażamy różne projekty informatyczne. Zajmujemy się kompleksowym tworzeniem stron internetowych, aplikacji webowych i hostingiem stron internetowych. Oferujemy także fachowe doradztwo, szybki i profesjonalny serwis komputerowy. Tworzymy także projekty w języku C#. Nasza firma zajmuję się także profesjonalną obróbką graficzną oraz profesjonalnym montażem filmów.
+            </p>
+        </div>
+        <aside>
+            <img class="logo" src="logob.png" alt="">
+            <h3>MJ Comp</h3>
+        </aside>
+    </section>
+    <section class="gallery flex flex-row">
+        <div class="media">
+            <div class="galright"><img src="1.jpg" alt=""></div>
+            <div class="galright"><img src="2.jpg" alt=""></div>
+            <div class="galright"><img src="3.jpg" alt=""></div>
+            <div class="galright"><img src="4.jpg" alt=""></div>
+        </div>
+        <div>
+            <div class="gal"><img src="1.jpg" alt=""></div>
+            <div class="gal"><img src="2.jpg" alt=""></div>
+            <div class="gal"><img src="3.jpg" alt=""></div>
+            <div class="gal"><img src="4.jpg" alt=""></div>
+        </div>
+        <div class="media">
+            <div class="galleft"><img src="1.jpg" alt=""></div>
+            <div class="galleft"><img src="2.jpg" alt=""></div>
+            <div class="galleft"><img src="3.jpg" alt=""></div>
+            <div class="galleft"><img src="4.jpg" alt=""></div>
+        </div>
+    </section>
+    <footer>Wykonano na potrzeby zajęć "Wprowadzenie do technologi webowych" | Mateusz Jawor 13049</footer>
+</body>
+<script>
+index = 1;
+slide();
+    function slide () {
+        x = document.getElementsByClassName("gal");
+        for(i=0; i < x.length; i++) {
+            x[i].style.display = "none";
+            x[i].classList.remove("galleryanimation");
+        }
+        index++;
+        if(index > x.length) {index = 1};
+        x[index-1].style.display = "block";
+        x[index-1].classList.add("galleryanimation");
+        setTimeout(slide, 10000);
+    }
+indexright = 0;
+slideright();
+    function slideright () {
+        x = document.getElementsByClassName("galleft");
+        for(i=0; i < x.length; i++) {
+            x[i].style.display = "none";
+            x[i].classList.remove("galleryanimation");
+        }
+        indexright++;
+        if(indexright > x.length) {indexright = 1};
+        x[indexright-1].style.display = "block";
+        x[indexright-1].classList.add("galleryanimation");
+        setTimeout(slideright, 10000);
+    }
+indexleft = 2;
+slideleft();
+    function slideleft () {
+        x = document.getElementsByClassName("galright");
+        for(i=0; i < x.length; i++) {
+            x[i].style.display = "none";
+            x[i].classList.remove("galleryanimation");
+        }
+        indexleft++;
+        if(indexleft > x.length) {indexleft = 1};
+        x[indexleft-1].style.display = "block";
+        x[indexleft-1].classList.add("galleryanimation");
+        setTimeout(slideleft, 10000);
+    }
+</script>
+</html>
